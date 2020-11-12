@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@color/background">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/info_cardview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150.0dip"
+                    android:layout_marginTop="10.0dip"
+                    custom:cardCornerRadius="5.0dip"
+                    custom:cardMaxElevation="6.0dip"
+                    custom:elevation="6.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/boarder_one"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0dip"
+                            android:layout_weight="0.8"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.7">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                                        android:id="@+id/getway_name"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:gravity="center"
+                                        android:lines="1"
+                                        android:text="Device Name"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="28.0dip" />
+
+                                    <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                                        android:id="@+id/no_of_host"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:lines="1"
+                                        android:text="@string/app_name"
+                                        android:textColor="@color/black"
+                                        android:textSize="18.0dip" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <Button
+                                android:id="@+id/scanhost"
+                                android:layout_width="0.0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_marginTop="2.0dip"
+                                android:layout_marginRight="2.0dip"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/rescan_button_back"
+                                android:gravity="center"
+                                android:text="@string/rescan"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0dip"
+                            android:layout_marginLeft="2.0dip"
+                            android:layout_marginRight="2.0dip"
+                            android:layout_weight="0.2"
+                            android:orientation="vertical">
+
+                            <com.daimajia.numberprogressbar.NumberProgressBar
+                                android:id="@+id/progressbar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="5.0dip"
+                                custom:progress_current="0"
+                                custom:progress_max="100"
+                                custom:progress_reached_bar_height="3.0dip"
+                                custom:progress_reached_color="@color/green"
+                                custom:progress_text_color="#ff3498db"
+                                custom:progress_text_offset="1.0dip"
+                                custom:progress_text_size="10.0sp"
+                                custom:progress_text_visibility="invisible"
+                                custom:progress_unreached_bar_height="3.0dip"
+                                custom:progress_unreached_color="#5025c914" />
+
+                            <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:paddingLeft="3.0dip"
+                                android:paddingRight="2.0dip"
+                                android:paddingBottom="2.0dip"
+                                android:text="@string/text_msg"
+                                android:textColor="@color/black"
+                                android:textSize="12.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                    android:id="@+id/textview_stranger"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info_cardview"
+                    android:paddingTop="5.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:text="Stranger Devices"
+                    android:textColor="@color/main"
+                    android:textSize="16.0dip" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/unknown_list_cardview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview_stranger"
+                    custom:cardCornerRadius="5.0dip"
+                    custom:cardMaxElevation="6.0dip"
+                    custom:elevation="6.0dip">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/unknown_list_recyclerview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boarder_one"
+                        android:paddingLeft="10.0dip"
+                        android:paddingRight="10.0dip"
+                        android:scrollbars="none" />
+                </android.support.v7.widget.CardView>
+
+                <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                    android:id="@+id/textview_known"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/unknown_list_cardview"
+                    android:paddingTop="5.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:text="Known Devices"
+                    android:textColor="@color/main"
+                    android:textSize="16.0dip" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/known_list_cardview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview_known"
+                    android:layout_marginBottom="10.0dip"
+                    custom:cardCornerRadius="5.0dip"
+                    custom:cardMaxElevation="6.0dip"
+                    custom:elevation="6.0dip">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/known_list_recyclerview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boarder_one"
+                        android:paddingLeft="10.0dip"
+                        android:paddingRight="10.0dip"
+                        android:scrollbars="none" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7.0dip"
+        android:orientation="vertical"
+        android:paddingBottom="7.0dip">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/router_info"
+            android:layout_width="fill_parent"
+            android:layout_height="140.0dip"
+            android:layout_marginBottom="7.0dip"
+            app:cardCornerRadius="5.0dip"
+            app:cardMaxElevation="6.0dip"
+            app:elevation="6.0dip">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/boarder_one"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/viewleft"
+                    android:layout_width="8.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/boarder_four_left" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@+id/viewright"
+                    android:layout_toRightOf="@+id/viewleft"
+                    android:paddingTop="5.0dip">
+
+                    <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                        android:id="@+id/text_download"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:drawableTop="@drawable/ic_action_download"
+                        android:gravity="center"
+                        android:padding="2.0dip"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14.0sp" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.6"
+                        android:gravity="top"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.0"
+                            android:orientation="vertical">
+
+                            <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                                android:id="@+id/router_connected_msg"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center|top"
+                                android:padding="2.0dip"
+                                android:text="You are connected to"
+                                android:textColor="@color/black"
+                                android:textSize="16.0dip" />
+
+                            <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                                android:id="@+id/router_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="2.0dip"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16.0dip" />
+                        </LinearLayout>
+
+                        <com.abcd.wifimanager.routerlogin.utils.ButtonFontStyle
+                            android:id="@+id/router_info_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10.0dip"
+                            android:background="@drawable/boarder"
+                            android:gravity="center"
+                            android:paddingLeft="25.0dip"
+                            android:paddingRight="25.0dip"
+                            android:stateListAnimator="@anim/card_animation"
+                            android:text="WiFi Router Info"
+                            android:textColor="@color/black"
+                            android:textSize="18.0dip" />
+                    </LinearLayout>
+
+                    <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                        android:id="@+id/text_upload"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:drawableTop="@drawable/ic_action_upload"
+                        android:gravity="center"
+                        android:padding="2.0dip"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewright"
+                    android:layout_width="8.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/boarder_four_right" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/relative_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/router_info"
+            android:orientation="horizontal"
+            android:weightSum="2.0">
+
+            <com.abcd.wifimanager.routerlogin.utils.ButtonFontStyle
+                android:id="@+id/btn_browse1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/boarder_second"
+                android:drawableEnd="@drawable/arrow_right_white_24dp"
+                android:drawableRight="@drawable/arrow_right_white_24dp"
+                android:gravity="center"
+                android:padding="10.0dip"
+                android:text="@string/btn_1"
+                android:textColor="@color/white" />
+
+            <com.abcd.wifimanager.routerlogin.utils.ButtonFontStyle
+                android:id="@+id/btn_browse2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginBottom="7.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/boarder_second"
+                android:drawableEnd="@drawable/arrow_right_white_24dp"
+                android:drawableRight="@drawable/arrow_right_white_24dp"
+                android:padding="10.0dip"
+                android:text="@string/btn_2"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/who_is_my_wifi"
+            android:layout_width="fill_parent"
+            android:layout_height="120.0dip"
+            android:layout_below="@+id/relative_1"
+            android:layout_marginBottom="7.0dip"
+            android:stateListAnimator="@anim/card_animation"
+            app:cardCornerRadius="5.0dip"
+            app:cardMaxElevation="6.0dip"
+            app:elevation="6.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/boarder_one"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/who_use_wifi_image" />
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.75"
+                    android:paddingLeft="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/view1"
+                        android:orientation="vertical">
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="left"
+                            android:paddingTop="5.0dip"
+                            android:paddingBottom="5.0dip"
+                            android:text="@string/main_screen_whois"
+                            android:textColor="@color/color_who_use_my_wifi_text"
+                            android:textSize="18.0sp" />
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:paddingTop="0.0dip"
+                            android:paddingBottom="2.0dip"
+                            android:text="@string/main_screen_whois_1"
+                            android:textColor="@color/light_gray"
+                            android:textSize="16.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="8.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/boarder_five" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/roter_setting"
+            android:layout_width="fill_parent"
+            android:layout_height="120.0dip"
+            android:layout_below="@+id/who_is_my_wifi"
+            android:layout_marginBottom="7.0dip"
+            android:stateListAnimator="@anim/card_animation"
+            app:cardCornerRadius="5.0dip"
+            app:cardMaxElevation="6.0dip"
+            app:elevation="6.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/boarder_one"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/router_setting" />
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.75"
+                    android:paddingLeft="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/view2"
+                        android:orientation="vertical">
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="left"
+                            android:paddingTop="5.0dip"
+                            android:paddingBottom="5.0dip"
+                            android:text="@string/main_screen_router_setting"
+                            android:textColor="@color/color_router_setting_text"
+                            android:textSize="18.0sp" />
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:paddingTop="0.0dip"
+                            android:paddingBottom="2.0dip"
+                            android:text="@string/main_screen_router_setting_1"
+                            android:textColor="@color/light_gray"
+                            android:textSize="16.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="8.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/boarder_six" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/router_password"
+            android:layout_width="fill_parent"
+            android:layout_height="120.0dip"
+            android:layout_below="@+id/roter_setting"
+            android:layout_marginBottom="7.0dip"
+            android:stateListAnimator="@anim/card_animation"
+            app:cardCornerRadius="5.0dip"
+            app:cardMaxElevation="6.0dip"
+            app:elevation="6.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/boarder_one"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/router_password" />
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.75"
+                    android:paddingLeft="5.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/view3"
+                        android:orientation="vertical">
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="left"
+                            android:paddingTop="5.0dip"
+                            android:paddingBottom="5.0dip"
+                            android:text="@string/main_screen_router_password"
+                            android:textColor="@color/color_router_password_text"
+                            android:textSize="18.0sp" />
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:paddingTop="0.0dip"
+                            android:paddingBottom="2.0dip"
+                            android:text="@string/main_screen_router_password_1"
+                            android:textColor="@color/light_gray"
+                            android:textSize="16.0sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="8.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/boarder_seven" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

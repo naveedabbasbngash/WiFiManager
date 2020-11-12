@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            app:cardCornerRadius="5.0dip">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip">
+
+                <LinearLayout
+                    android:id="@+id/header_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/device_icon"
+                        android:layout_width="30.0dip"
+                        android:layout_height="?actionBarSize"
+                        android:src="@drawable/ic_smartphone"
+                        android:tint="@color/main" />
+
+                    <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                        android:id="@+id/header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?actionBarSize"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/device_icon"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:padding="10.0dip"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="18.0dip" />
+
+                    <ImageView
+                        android:id="@+id/rename_icon"
+                        android:layout_width="25.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_action_edit"
+                        android:tint="#ff6c6c6c"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_below="@+id/header_layout"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@color/divider" />
+
+                <TableLayout
+                    android:id="@+id/deviceInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider"
+                    android:layout_margin="5.0dip"
+                    android:background="@color/white">
+
+                    <TableRow style="@style/cellpadding">
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/deviceMacAddressLabel"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:text="Device Name :"
+                            android:textColor="@color/black" />
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/deviceName"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:gravity="end"
+                            android:textColor="@color/blue"
+                            android:textIsSelectable="true" />
+                    </TableRow>
+
+                    <TableRow
+                        style="@style/cellpadding"
+                        android:visibility="gone">
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/deviceMacVendorLabel"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:text="Device OS:"
+                            android:textColor="@color/black" />
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/deviceOS"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:gravity="end"
+                            android:textColor="@color/blue"
+                            android:textIsSelectable="true" />
+                    </TableRow>
+
+                    <TableRow style="@style/cellpadding">
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/internalIpAddressLabel"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:text="Brand:"
+                            android:textColor="@color/black" />
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/brand"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:gravity="end"
+                            android:textColor="@color/blue"
+                            android:textIsSelectable="true" />
+                    </TableRow>
+
+                    <TableRow style="@style/cellpadding">
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/externalIpAddressLabel"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:text="IP Address:"
+                            android:textColor="@color/black" />
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/ipAddress"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:gravity="end"
+                            android:textColor="@color/blue"
+                            android:textIsSelectable="true" />
+                    </TableRow>
+
+                    <TableRow style="@style/cellpadding">
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/signalStrengthLabel"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:text="MAC Address:"
+                            android:textColor="@color/black" />
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/macAddress"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:gravity="end"
+                            android:textColor="@color/blue"
+                            android:textIsSelectable="true" />
+                    </TableRow>
+
+                    <TableRow style="@style/cellpadding">
+
+                        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+                            android:id="@+id/ssidLabel"
+                            style="@style/DeviceInfoItem"
+                            android:layout_height="fill_parent"
+                            android:text="Known or Not:"
+                            android:textColor="@color/black" />
+
+                        <RelativeLayout
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0">
+
+                            <com.abcd.wifimanager.routerlogin.utils.ButtonFontStyle
+                                android:id="@+id/button_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40.0dip"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/button_background"
+                                android:lines="1"
+                                android:text="@string/stranger"
+                                android:textColor="@color/white"
+                                android:textSize="12.0sp" />
+                        </RelativeLayout>
+                    </TableRow>
+                </TableLayout>
+
+                <com.abcd.wifimanager.routerlogin.utils.ButtonFontStyle
+                    android:id="@+id/block_wifi_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deviceInfo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/btn_background"
+                    android:paddingLeft="15.0dip"
+                    android:paddingRight="15.0dip"
+                    android:text="Block Stranger Device"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

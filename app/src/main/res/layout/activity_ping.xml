@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/con"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8.0dip"
+            android:layout_marginBottom="-5.0dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/con">
+
+        <LinearLayout
+            android:id="@+id/lv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip">
+
+            <AutoCompleteTextView
+                android:id="@+id/host"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter IP Address"
+                android:padding="10.0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lv2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lv"
+            android:layout_margin="10.0dip"
+            android:orientation="horizontal">
+
+            <com.abcd.wifimanager.routerlogin.utils.EditTextFontStyle
+                android:id="@+id/edttime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3.0dip"
+                android:layout_weight="0.5"
+                android:hint="Time :"
+                android:inputType="number"
+                android:maxLength="7"
+                android:padding="10.0dip" />
+
+            <com.abcd.wifimanager.routerlogin.utils.EditTextFontStyle
+                android:id="@+id/edtcount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3.0dip"
+                android:layout_weight="0.5"
+                android:hint="Count :"
+                android:inputType="number"
+                android:maxLength="7"
+                android:padding="10.0dip" />
+        </LinearLayout>
+
+        <com.abcd.wifimanager.routerlogin.utils.ButtonFontStyle
+            android:id="@+id/startBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lv2"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/boarder"
+            android:paddingLeft="25.0dip"
+            android:paddingRight="25.0dip"
+            android:text="Start Test"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lv1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rv"
+        android:layout_marginTop="5.0dip"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+            android:id="@+id/tvpinging"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2.0dip"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <com.abcd.wifimanager.routerlogin.utils.TextViewFontStyle
+            android:id="@+id/tvpingcount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2.0dip"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/v10"
+            android:layout_width="fill_parent"
+            android:layout_height="1.5dip"
+            android:layout_below="@+id/tv1"
+            android:layout_marginTop="5.0dip" />
+
+        <ListView
+            android:id="@+id/pingListview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "484583923487",
+    "firebase_url": "https://wifi-mnager.firebaseio.com",
+    "project_id": "wifi-mnager",
+    "storage_bucket": "wifi-mnager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484583923487:android:d97f03637559dc41",
+        "android_client_info": {
+          "package_name": "com.defaultwifipasswords.wifimanager.routerlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484583923487-a9b5vd3vae6hs8pivp1554qji9qiutuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIfNTxGdXiV0A1By2u4cyIE5em2vdZXKI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

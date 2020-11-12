@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#ffec2045</color>
+    <color name="background">#fff0f0f0</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">@color/colorPrimary</color>
+    <color name="btn_1">@color/colorPrimary</color>
+    <color name="btn_2">#ff0f5e8c</color>
+    <color name="colorAccent">#ffff4081</color>
+    <color name="colorPrimary">#6CAFF3</color>
+    <color name="colorPrimary1">#bfdfed</color>
+    <color name="colorPrimaryDark">#278ef7</color>
+    <color name="color_router_password">#70e23a59</color>
+    <color name="color_router_password_text">#ffe23a59</color>
+    <color name="color_router_setting">#70ddbd1d</color>
+    <color name="color_router_setting_text">#ffddbd1d</color>
+    <color name="color_text">#ff1e62ed</color>
+    <color name="color_who_use_my_wifi">#700f5e8c</color>
+    <color name="color_who_use_my_wifi_text">#ff0f5e8c</color>
+    <color name="design_default_color_primary">#ff3f51b5</color>
+    <color name="design_default_color_primary_dark">#ff303f9f</color>
+    <color name="divider">#ffd7d7d7</color>
+    <color name="green">#ff25c914</color>
+    <color name="grey_200">#ffeeeeee</color>
+    <color name="grey_400">#ffbdbdbd</color>
+    <color name="grey_500">#ff9e9e9e</color>
+    <color name="light_gray">#ff7c7c7c</color>
+    <color name="main">@color/colorPrimary</color>
+    <color name="orange">#fff29400</color>
+    <color name="red">#ffec0608</color>
+    <color name="section_toolbar_color">#ffe23a59</color>
+    <color name="section_toolbar_divider">@color/black</color>
+    <color name="white">#ffffffff</color>
+</resources>

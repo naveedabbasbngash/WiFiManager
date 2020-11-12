@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_wifi"
+        android:title="@string/action_settings"
+        app:actionLayout="@layout/menu_layout"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/rate"
+        android:icon="@drawable/ic_star"
+        app:showAsAction="always"
+        android:title="Rate Us" />
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="never"
+        android:title="Share App" />
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/ic_more"
+        android:title="More Apps" />
+    <item
+        android:id="@+id/privacy_policy"
+        android:icon="@drawable/ic_privacy"
+        android:title="Privacy Policy" />
+</menu>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">WiFi Manager</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="btn_1">Optimize your network performance</string>
+    <string name="btn_2">Check Free Wifi Internet around you</string>
+    <string name="device_info">Device - Info</string>
+    <string name="main_screen_router_password">Router Passwords</string>
+    <string name="main_screen_router_password_1">Find your router default password, if you can’t find your model, Try similar brand</string>
+    <string name="main_screen_router_setting">Router Settings</string>
+    <string name="main_screen_router_setting_1">Router Setup Page is a very simple feature that allows you to find your router web page in which you can edit all the available options</string>
+    <string name="main_screen_whois">Who is on my WiFi?</string>
+    <string name="main_screen_whois_1">Detect who is on my wifi, you can mark as ‘Known’ or ‘Stranger’ and you also can block if from your WiFi</string>
+    <string name="nav_ping">Ping</string>
+    <string name="nav_whois">Whois</string>
+    <string name="nav_wifi_list">WiFi List</string>
+    <string name="noWifiConnection">No WiFi connection</string>
+    <string name="notConnectedWifi">"You're not connected to a WiFi network!"</string>
+    <string name="notice_password">Try similar model if yours not on the list</string>
+    <string name="rescan">Rescan</string>
+    <string name="router">Router</string>
+    <string name="stranger">Stranger</string>
+    <string name="text_msg">Check the Device and mark familiar devices as known</string>
+    <string name="title_activity_router_password">Router_password</string>
+    <string name="wifiDisabled">WiFi not enabled</string>
+    <string name="wifi_info">WiFi - Info</string>
+    <string name="your_device">Your Device</string>
+</resources>
